@@ -1,0 +1,8 @@
+
+
+.background-image-container {
+  background: url("../../../../assets/black-lady-bg.png"), linear-gradient(#E9001E, #0050BC);
+  background-size:contain;
+  height: 100vh;
+  background-blend-mode: multiply;
+}
