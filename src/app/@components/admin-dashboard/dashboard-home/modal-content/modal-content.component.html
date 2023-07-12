@@ -1,0 +1,249 @@
+<!-- content-modal.component.html -->
+
+<div class="modal-body modal-scroll">
+    <div class="d-flex justify-content-between">
+        <div></div>
+        <div style="cursor: pointer;">
+            <svg (click)="closeModal()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Initial content section -->
+    <div *ngIf="currentContent === 0">
+        <div class="row mt-3 p-3">
+            <div class="col-md-12">
+                <div class="card card-amount-bg p-10">
+                    <div class=" d-flex justify-content-between ">
+
+                        <div>
+                            <h4>Account Balance</h4>
+                            <h1 class="text-4xl mt-2 font-bold">₦53,835,619.93</h1>
+                        </div>
+                        <div class="mt-3">
+                            <div class="ml-10">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="">
+                                <p>Show Balance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="mt-3">
+                    <h3 class="font-bold text-lg">Your Recent beneficiaries</h3>
+                </div>
+                <div>
+                    <form>
+                        <label for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 "
+                                placeholder="Search beneficiary" required>
+                        </div>
+                        <div class="mt-3">
+                            <hr>
+                        </div>
+                        <div class="mt-3">
+                            <label for="input-group-1" class="block mb-2 text-md font-bold text-gray-900">
+                                Amount</label>
+                            <div class="mb-3">
+                                <input type="number" id="input-group-1"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  "
+                                    placeholder="₦ 0.0">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="input-group-1" class="block mb-2 text-md font-bold text-gray-900">
+                                Select Bank</label>
+                            <select id="countries_disabled"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>Choose a bank</option>
+                                <option value="US">First Bank</option>
+                                <option value="CA">Uba</option>
+                                <option value="FR">Gtbank</option>
+                                <option value="DE">Zenith Bank</option>
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <label for="input-group-1" class="block mb-2 text-md font-bold text-gray-900">
+                                Account Number</label>
+                            <div class="mb-6">
+                                <input type="number" id="input-group-1"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  "
+                                    placeholder="0123456789">
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="input-group-1" class="block mb-2 text-md font-bold text-gray-900">
+                                Account Name</label>
+                            <div class="mb-3">
+                                <input type="text" id="input-group-1"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  "
+                                    placeholder="John Doe">
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <label for="input-group-1" class="block mb-2 text-md font-bold text-gray-900">
+                                Remark</label>
+                            <div class="mb-3">
+                                <input type="text" id="input-group-1"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  "
+                                    placeholder="Add a remark">
+                            </div>
+                        </div>
+                        <button
+                            class=" w-full text-white bg-[#E9001E] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center"
+                            (click)="showNextContent()">Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content-1 section -->
+    <div *ngIf="currentContent === 1">
+        <div class="mt-3">
+            <div class="d-flex justify-content-between">
+                <div style="cursor: pointer;">
+                    <svg (click)="showPreviousContent()" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                    </svg>
+                </div>
+                <div>
+                    <img src="../../../../assets/logo-dark.svg" alt="kvlogo">
+                </div>
+            </div>
+            <div>
+                <div class="mt-5 px-3">
+                    <h3 class="font-extrabold text-3xl">Confirm <span class="text-[#EF0000]">₦ 10,000</span> payment to
+                        <span class="text-[#EF0000]">Stephen Brown - 0123456789 - <span
+                                class="flex justify-center">First Bank</span></span>
+                    </h3>
+                    <div class="px-3 mt-3 text-[#64748B]">
+                        <p>Please confirm thet the details above are correct. <span
+                                class="d-flex justify-content-center">Submitted payments cannot be recalled</span></p>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h3 class="mt-4 text-xl font-bold text-center mb-5">Enter Pin</h3>
+                    <app-otp></app-otp>
+
+                    <div class="mt-3 px-4">
+                        <button
+                            class=" w-full text-white bg-[#E9001E] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center"
+                            (click)="showNextContent()">Done</button>
+                        <button
+                            class="mt-2 w-full text-[#E9001E] bg-[#fff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content-2 section -->
+    <div *ngIf="currentContent === 2">
+        <div class="mt-3">
+            <div class="d-flex justify-content-between">
+                <div style="cursor: pointer;">
+                    <!-- <svg (click)="showPreviousContent()" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                    </svg> -->
+                </div>
+                <div>
+                    <img src="../../../../assets/logo-dark.svg" alt="kvlogo">
+                </div>
+            </div>
+
+            <div class="mt-10 flex justify-center">
+                <div>
+                    <img class="ml-20" src="../../../../../assets/check.svg" alt="check">
+                    <h1 class="font-black text-5xl">Successful</h1>
+                    <p class="text-[#64748B] text-xl">Your request was successful</p>
+                </div>
+            </div>
+            <div class="mt-10 px-4">
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="text-[#94A3B8]">
+                        Recipient name
+                    </div>
+                    <div>
+                        John Doe
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between mb-3 mt-3">
+                    <div class="text-[#94A3B8]">
+                        Recipient account
+                    </div>
+                    <div>
+                        0123745989
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between mb-3 mt-3">
+                    <div class="text-[#94A3B8]">
+                        Recipient Bank
+                    </div>
+                    <div>
+                        First Bank
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between mb-3 mt-3">
+                    <div class="text-[#94A3B8]">
+                        Amount
+                    </div>
+                    <div>
+                        ₦ 10,000
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between mb-3 mt-3">
+                    <div class="text-[#94A3B8]">
+                        From
+                    </div>
+                    <div>
+                        Ibrahim babatunde
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-around">
+                <div>
+                    <button
+                        class=" w-full text-white bg-[#E9001E] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center"
+                        >Download Receipt</button>
+                </div>
+                <div>
+                    <button
+                        class=" w-full text-white bg-[#0050BC] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-3 text-center"
+                        >Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

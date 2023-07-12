@@ -1,0 +1,17 @@
+.card-amount-bg {
+  background: linear-gradient(0.25turn, #db2521, #25196b);
+  color: #fff;
+  border-radius: 1.5625rem;
+}
+.card-ft-bg {
+  border-radius: 1.5625rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+
+}
+.card-ft-bg:hover {
+    background: linear-gradient(0.25turn, #db2521, #25196b);
+    color: #fff;
+    transform: scale(1.05);
+}

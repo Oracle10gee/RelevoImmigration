@@ -1,0 +1,27 @@
+.card-amount-bg {
+  background: linear-gradient(0.25turn, #db2521, #25196b);
+  color: #fff;
+  border-radius: 1.5625rem;
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari/Edge */
+  padding-left: 1rem;
+}
+
+.modal-scroll {
+  background-color: #f2f2ff;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#e9001e, #0050bc);
+}

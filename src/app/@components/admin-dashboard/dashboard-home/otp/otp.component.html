@@ -1,0 +1,18 @@
+<!-- <input
+  *ngFor="let digit of otpDigits; let i = index"
+  type="text"
+  [maxlength]="1"
+  [(ngModel)]="otp[i]"
+  (ngModelChange)="onInputChange($event, i)"
+  (keydown)="onKeydown($event, i)"
+  (paste)="onPaste($event)"
+  (keyup.backspace)="onBackspaceKey($event)"
+  #inputBoxes
+/> -->
+
+<div class="otp-container">
+    <input class="otp-input" type="text" maxlength="1" />
+    <input class="otp-input" type="text" maxlength="1" />
+    <input class="otp-input" type="text" maxlength="1" />
+    <input class="otp-input" type="text" maxlength="1" />
+</div>
