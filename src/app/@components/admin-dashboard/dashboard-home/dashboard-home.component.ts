@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  NgbModal,
-  NgbModalOptions,
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 
 @Component({
@@ -13,10 +10,16 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
 export class DashboardHomeComponent {
   constructor(private modalService: NgbModal) {}
 
+  isBalanceHidden = true;
+
+  toggleBalance(): void {
+    this.isBalanceHidden = !this.isBalanceHidden;
+  }
+
   openModal() {
     const modalOptions: NgbModalOptions = {
-      backdrop: 'static', // Set backdrop option to 'static' to prevent closing on outside click
-      keyboard: false, // Disable keyboard interactions
+      backdrop: 'static',
+      keyboard: false,
       size: 'md', // Set the size of the modal (e.g., 'lg', 'sm')
     };
 

@@ -1,0 +1,108 @@
+/* admin-dashboard.component.scss */
+
+.wrapper {
+  display: flex;
+  background-color: #F2F2FF;
+  
+}
+
+.sidebar {
+  height: 100vh;
+  min-width: 350px;
+  padding: 20px;
+  /* z-index: 1; */
+  background: url("../../../../assets/black-lady-bg.png"),
+    linear-gradient(#e9001e, #0050bc);
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar .nav-link {
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar .nav-link:hover {
+  background-color: #fff;
+  border-radius: 0.7rem;
+  border: 2px solid #E9001E;
+  color: #E9001E;
+}
+
+.sidebar .nav-link.active {
+  background-color: #fff;
+  border-radius: 0.7rem;
+  border: 2px solid #E9001E;
+  color: #E9001E;
+}
+
+#content {
+  flex-grow: 1;
+  /* padding: 20px; */
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+#sidebarCollapse {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.main-content {
+  height: calc(100vh - 110px); /* Adjust the height as needed */
+  overflow-y: auto;
+}
+
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 0;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  #content {
+    margin-left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #333;
+  }
+
+  .navbar-toggler[aria-expanded="true"] {
+    background-color: transparent;
+  }
+}
+
+/* 
+.sidebar {
+  height: 100vh;
+  padding: 20px;
+  background: url("../../../../assets/black-lady-bg.png"),
+    linear-gradient(#e9001e, #0050bc);
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+} */
