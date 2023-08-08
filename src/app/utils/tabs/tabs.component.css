@@ -1,0 +1,10 @@
+button {
+    color: #fff;
+    width: 250px;
+}
+.activeTab {
+  background-color: #29166F;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+}

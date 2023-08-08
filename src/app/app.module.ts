@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { OtpComponent } from './@components/admin-dashboard/dashboard-home/otp/o
 import { TransferSuccessComponent } from './@components/admin-dashboard/dashboard-home/transfer-success/transfer-success.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContentComponent } from './@components/admin-dashboard/dashboard-home/modal-content/modal-content.component';
+import { TabsComponent } from './utils/tabs/tabs.component';
+import { PillsComponent } from './utils/pills/pills.component';
+import { CoreTabsComponent } from './utils/core-tabs/core-tabs.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +34,16 @@ import { ModalContentComponent } from './@components/admin-dashboard/dashboard-h
     BankTransferComponent,
     OtpComponent,
     TransferSuccessComponent,
-    ModalContentComponent
+    ModalContentComponent,
+    TabsComponent,
+    PillsComponent,
+    CoreTabsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],

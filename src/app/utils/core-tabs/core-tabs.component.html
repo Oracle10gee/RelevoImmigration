@@ -1,0 +1,188 @@
+<div class="border border-gray-200 rounded">
+    <div class="flex tabs bg-light justify-content-between">
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+            [class.coreActiveTab]="coreActiveTab === 'coreTab1'" (click)="coreActiveTab = 'coreTab1'">
+            Banking & Transaction
+        </button>
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+            [class.coreActiveTab]="coreActiveTab === 'coreTab2'" (click)="coreActiveTab = 'coreTab2'">
+            Financial Products
+        </button>
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+            [class.coreActiveTab]="coreActiveTab === 'coreTab3'" (click)="coreActiveTab = 'coreTab3'">
+            Business Services
+        </button>
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+            [class.coreActiveTab]="coreActiveTab === 'coreTab4'" (click)="coreActiveTab = 'coreTab4'">
+            Business Tools
+        </button>
+    </div>
+    <div class="p-4">
+        <ng-container [ngSwitch]="coreActiveTab">
+            <div class="pl-2" *ngSwitchCase="'coreTab1'">
+                <!-- Content for Tab 1 -->
+                <div class="features">
+                    <h3>Transfer and Payments</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/random.svg" alt="">
+                                <p>Transfers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/shopping-cart.svg" alt="">
+                                <p>Expenses
+                                    Mgt</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-2" src="../../../assets/money-bill-alt.svg" alt="">
+                                <p>Payroll</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/university.svg" alt="">
+                                <p>Make
+                                    Payments</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/dollar-sign.svg" alt="">
+                                <p>Pay Tax</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 features">
+                    <h3>Recieve Payments</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/qr-code.svg" alt="">
+                                <p>QR Code</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-1" src="../../../assets/atm-card.svg" alt="">
+                                <p>Cards</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ft-card">
+                                <img class="ms-5" src="../../../assets/mobile.svg" alt="">
+                                <p>Cards
+                                    Online
+                                    Payments</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/file-folder.svg" alt="">
+                                <p>View
+                                    Payments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 features">
+                    <h3>Everything FX</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/university.svg" alt="">
+                                <p>Rates
+                                    & Policies</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-1" src="../../../assets/dollar-sign.svg" alt="">
+                                <p>Get Forex</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/chart-line.svg" alt="">
+                                <p>View Report</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 features">
+                    <h3>Trade & Form M</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-3" src="../../../assets/file-alt.svg" alt="">
+                                <p>Form M</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-1" src="../../../assets/cc-mastercard.svg" alt="">
+                                <p>Payment</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/map-marker-alt.svg" alt="">
+                                <p>Track Cargo</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-1" src="../../../assets/bell.svg" alt="">
+                                <p>Alerts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 features">
+                    <h3>Loans</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/file-invoice-dollar.svg" alt="">
+                                <p>
+                                    Business
+                                    Loan</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="ft-card">
+                                <img class="ms-4" src="../../../assets/archive.svg" alt="">
+                                <p>Personal
+                                    Loan</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ft-card ">
+                                <img class="ms-4" src="../../../assets/manage-loan.svg" alt="">
+                                <p>Manage
+                                    Loan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="'coreTab2'">
+                <!-- Content for Tab 2 -->
+                <p>Tab 2 content goes here.</p>
+            </div>
+            <div *ngSwitchCase="'coreTab3'">
+                <!-- Content for Tab 3 -->
+                <p>Tab 3 content goes here.</p>
+            </div>
+            <div *ngSwitchCase="'coreTab4'">
+                <!-- Content for Tab 3 -->
+                <p>Tab 3 content goes here.</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class=" border-gray-200 rounded">
+    <div class="flex tabs bg-black justify-content-between">
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold" [class.activeTab]="activeTab === 'tab1'"
+            (click)="activeTab = 'tab1'">
+            Balance
+        </button>
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold" [class.activeTab]="activeTab === 'tab2'"
+            (click)="activeTab = 'tab2'">
+            Statement
+        </button>
+        <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold" [class.activeTab]="activeTab === 'tab3'"
+            (click)="activeTab = 'tab3'">
+            Report
+        </button>
+    </div>
+    <div class="p-4">
+        <ng-container [ngSwitch]="activeTab">
+            <div *ngSwitchCase="'tab1'">
+                <!-- Content for Tab 1 -->
+                <app-pills></app-pills>
+                <div class="container core-content mt-4">
+                    <app-core-tabs></app-core-tabs>
+                </div>
+            </div>
+            <div *ngSwitchCase="'tab2'">
+                <!-- Content for Tab 2 -->
+                <p>Tab 2 content goes here.</p>
+            </div>
+            <div *ngSwitchCase="'tab3'">
+                <!-- Content for Tab 3 -->
+                <p>Tab 3 content goes here.</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

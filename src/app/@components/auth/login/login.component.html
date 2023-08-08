@@ -1,4 +1,4 @@
-<div class="background-image-container">
+<!-- <div class="background-image-container">
     <div class="card-container flex justify-center p-10">
 
         <div
@@ -15,8 +15,8 @@
                             Email Address</label>
                         <div class="relative mb-6">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 16">
                                     <path
                                         d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
                                     <path
@@ -52,10 +52,12 @@
                             <label for="remember" style="text-decoration: none;"
                                 class="ml-2 text-sm font-medium text-gray-900">Remember Me</label>
                         </div>
-                        <a href="#" class="ml-auto text-sm text-dark-900 font-bold" routerLink="/forgot-password">Forgot Password?</a>
+                        <a href="#" class="ml-auto text-sm text-dark-900 font-bold" routerLink="/forgot-password">Forgot
+                            Password?</a>
                     </div>
                     <button type="submit"
-                        class="mt-3 w-full text-white bg-[#E93223] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" routerLink="/dashboard">Login</button>
+                        class="mt-3 w-full text-white bg-[#E93223] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        routerLink="/dashboard">Login</button>
                     <div class="mt-5 text-center font-medium text-gray-500">
                         Don't have an account? <a href="#" class="text-[#E93223] font-bold hover:underline">Sign up
                             here</a>
@@ -66,5 +68,82 @@
 
 
 
+    </div>
+</div> -->
+
+<div class="background-image-container">
+    <div class="card-container flex justify-center p-10">
+        <div
+            class="mt-10 p-3 w-full max-w-lg bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-6">
+                <img src="../../../../assets/logo-dark.svg" alt="kvlogo">
+                <div>
+                    <h5 class="text-3xl font-bold text-gray-900 ">Login to your
+                        account</h5>
+                </div>
+                <div>
+                    <div>
+                        <label for="username" class="block mb-2 text-lg font-bold text-gray-900">
+                            Email Address</label>
+                        <div class="relative mb-2">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 20 16">
+                                    <path
+                                        d="M10.036 8.278 9.258-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                    <path
+                                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="username" formControlName="username"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  "
+                                placeholder="name@flowbite.com">
+                        </div>
+                        <!-- Display validation errors if the username control is invalid -->
+                        <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched"
+                            class="text-red-500 text-sm">Email Address is required.</div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="password" class="block mb-2 text-lg font-bold text-gray-900">
+                            Password</label>
+                        <div class="relative mb-2">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-500">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                </svg>
+                            </div>
+                            <input type="password" id="password" formControlName="password" placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                required>
+                        </div>
+                        <!-- Display validation errors if the password control is invalid -->
+                        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                            class="text-red-500 text-sm mt-2">Password is required.</div>
+                    </div>
+                    <div class="flex items-start mt-3">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="remember" type="checkbox" value=""
+                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
+                                    required>
+                            </div>
+                            <label for="remember" style="text-decoration: none;"
+                                class="ml-2 text-sm font-medium text-gray-900">Remember Me</label>
+                        </div>
+                        <a href="#" class="ml-auto text-sm text-dark-900 font-bold" routerLink="/forgot-password">Forgot
+                            Password?</a>
+                    </div>
+                    <button type="submit"
+                        class="mt-3 w-full text-white bg-[#E93223] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        [disabled]="loginForm.invalid" routerLink="/dashboard">Login</button>
+                    <div class="mt-5 text-center font-medium text-gray-500">
+                        Don't have an account? <a href="#" class="text-[#E93223] font-bold hover:underline">Sign up
+                            here</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

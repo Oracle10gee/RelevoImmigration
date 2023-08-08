@@ -1,0 +1,54 @@
+<div class="rounded">
+    <div class="px-5">
+        <div class="border pill-radius ms-5 flex tabs bg-light w-75">
+            <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+                [class.activePill]="activePill === 'pill1'" (click)="activePill = 'pill1'">
+                Business News
+            </button>
+            <button class="px-4 py-3 text-gray-500 focus:outline-none font-bold"
+                [class.activePill]="activePill === 'pill2'" (click)="activePill = 'pill2'">
+                Message Center
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <ng-container [ngSwitch]="activePill">
+            <div *ngSwitchCase="'pill1'">
+                <!-- Content for Tab 1 -->
+                <div>
+                    <p class="flex">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="ms-2">Has the fintech revolution started inflation hits 20years high of 28%.</span>
+                    </p>
+                    <p class="flex mt-3">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="ms-2">Dangote declares half year results.</span>
+                    </p>
+                    <p class="flex mt-3">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="ms-2">CBN opens SME funding window.</span>
+                    </p>
+                </div>
+            </div>
+            <div *ngSwitchCase="'pill2'">
+                <!-- Content for Tab 2 -->
+                <p>Tab 2 content goes here.</p>
+            </div>
+        </ng-container>
+    </div>
+</div>
