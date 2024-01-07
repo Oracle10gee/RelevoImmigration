@@ -27,7 +27,7 @@
     "@swimlane/ngx-charts": "^20.5.0",
     "autoprefixer": "^10.4.14",
     "bootstrap": "^5.3.0",
-    "chart.js": "^3.9.1",
+    "chart.js": "^4.4.1",
     "ng2-charts": "^4.1.1",
     "ngx-chartjs": "^0.0.1",
     "postcss": "^8.4.25",
