@@ -11,13 +11,20 @@ import { ContactUsComponent } from './@components/admin-dashboard/contact-us/con
 import { BankTransferComponent } from './@components/admin-dashboard/dashboard-home/bank-transfer/bank-transfer.component';
 import { OtpComponent } from './@components/admin-dashboard/dashboard-home/otp/otp.component';
 import { TransferSuccessComponent } from './@components/admin-dashboard/dashboard-home/transfer-success/transfer-success.component';
+import { CheckoutTestComponent } from './@components/checkout-test/checkout-test.component';
+import { RegisterComponent } from './@components/auth/register/register.component';
+import { VerifyEmailComponent } from './@components/auth/verify-email/verify-email.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },   // Default route
+  {path: '', redirectTo: 'login', pathMatch:'full'},// Default route
+  { path: 'login', component: LoginComponent }, 
+  { path: 'register', component: RegisterComponent }, 
+  { path: 'checkout', component: CheckoutTestComponent },
+  { path: 'verify-email', component: VerifyEmailComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'dashboard', component: DashboardComponent, children: [
-    { path: '', redirectTo: 'dashboard-home', pathMatch: 'full' },
-    { path: 'dashboard-home', component: DashboardHomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: DashboardHomeComponent },
     { path: 'pay-now', component: PayNowComponent },
     { path: 'settings', component: SettingsComponent },
     { path: 'contact-us', component: ContactUsComponent },

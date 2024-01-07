@@ -1,10 +1,9 @@
-
 <div class="wrapper">
   <!-- Sidebar -->
   <div class="sidebar">
     <div class="d-flex justify-content-between">
       <a class="navbar-brand mb-3" href="#">
-        <img src="../../../../assets/logo-light.svg" alt="kvlogo">
+        <img src="../../../../assets/relevo-logo-white.svg" alt="kvlogo">
       </a>
       <button class="navbar-toggler" type="button" id="sidebarCollapse" (click)="toggleSidebar()">
         <span class="navbar-toggler-icon"></span>
@@ -13,7 +12,7 @@
     <div class="mt-4">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link d-flex" routerLink="/dashboard/dashboard-home" routerLinkActive="active">
+          <a class="nav-link d-flex" routerLink="/dashboard/home" routerLinkActive="active">
             <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -33,7 +32,7 @@
             </span>
             <span class="ml-2">Pay Now</span></a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link d-flex" routerLink="/dashboard/settings" routerLinkActive="active">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -45,7 +44,7 @@
             </span>
             <span class="ml-2">Settings</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link d-flex" routerLink="/dashboard/contact-us" routerLinkActive="active">
             <span>
@@ -56,6 +55,17 @@
               </svg>
             </span>
             <span class="ml-2">Contact Us</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" (click)="Logout()" routerLinkActive="active">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+              </svg>
+            </span>
+            <span class="ml-2">Logout</span></a>
         </li>
       </ul>
     </div>
@@ -68,7 +78,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="d-flex justify-content-between p-3">
           <div></div>
-          <div>Placeholder</div>
+          <div>Dashboard</div>
         </div>
       </nav>
     </header>

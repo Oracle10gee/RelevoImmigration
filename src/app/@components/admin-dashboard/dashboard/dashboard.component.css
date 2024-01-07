@@ -2,16 +2,15 @@
 
 .wrapper {
   display: flex;
-  background-color: #F2F2FF;
-  
+  background-color: #f2f2ff;
 }
 
 .sidebar {
   height: 100vh;
   min-width: 350px;
   padding: 20px;
-  background: url("../../../../assets/black-lady-bg.png"),
-    linear-gradient(#e9001e, #0050bc);
+  background: url("../../../../assets/europe.jpg"),
+    linear-gradient(#d9d9d9, #0050bc);
   background-size: contain;
   background-blend-mode: multiply;
 }
@@ -28,15 +27,15 @@
 .sidebar .nav-link:hover {
   background-color: #fff;
   border-radius: 0.7rem;
-  border: 2px solid #E9001E;
-  color: #E9001E;
+  border: 2px solid #d9d9d9;
+  color: #000000;
 }
 
 .sidebar .nav-link.active {
   background-color: #fff;
   border-radius: 0.7rem;
-  border: 2px solid #E9001E;
-  color: #E9001E;
+  border: 2px solid #d9d9d9;
+  color: #000000;
 }
 
 #content {
@@ -55,7 +54,6 @@
   height: calc(100vh - 110px);
   overflow-y: auto;
 }
-
 
 @media (max-width: 768px) {
   #sidebar {
@@ -82,3 +80,6 @@
   }
 }
 
+.nav {
+  cursor: pointer;
+}

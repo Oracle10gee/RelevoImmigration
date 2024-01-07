@@ -23,9 +23,18 @@ ol {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#e9001e, #0050bc);
+  background: linear-gradient(#d9d9d9, #0050bc);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

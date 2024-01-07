@@ -15,3 +15,23 @@
     color: #fff;
     transform: scale(1.05);
 }
+
+/* home-overview.component.css */
+
+.card {
+  margin: 20px;
+  height: 6.5rem;
+}
+
+.card-chart {
+  height: 30rem !important;
+}
+
+.progress {
+  height: 25px;
+}
+
+.progress-bar {
+  font-size: 14px;
+  line-height: 25px;
+}

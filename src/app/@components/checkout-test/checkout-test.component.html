@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="card p-3">
+        <h6 class="pb-3">Checkout Form Using Reactive Forms</h6>
+        <form [formGroup]="checkOutForm" (ngSubmit)="postData()">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" Dashboard="Email" formControlName="email">
+                    <span
+                        *ngIf="checkOutForm.get('email')?.touched && checkOutForm.get('email')?.hasError('required')">Enter
+                        Email Address</span>
+                    <span
+                        *ngIf="checkOutForm.get('email')?.touched && checkOutForm.get('email')?.hasError('email')">Enter
+                        Valid Email Address</span>
+                    <span
+                        *ngIf="checkOutForm.get('email')?.touched && checkOutForm.get('email')?.hasError('minlength')">Enter
+                        minimum of 5 characters</span>
+                    <span
+                        *ngIf="checkOutForm.get('email')?.touched && checkOutForm.get('email')?.hasError('maxlength')">maximum
+                        of 30 characters exceeded</span>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Quantity</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputPassword3" Dashboard="Quantity"
+                        formControlName="quantity">
+                    <span
+                        *ngIf="checkOutForm.get('quantity')?.touched && checkOutForm.get('quantity')?.hasError('required')">Enter
+                        Quantity</span>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1" formControlName="terms">
+                        <label class="form-check-label" for="gridCheck1">
+                            Agree to Terms
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 mt-3">
+                    <button type="submit" class="btn btn-primary text-white"
+                        [disabled]="!checkOutForm.valid">Checkout</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
