@@ -20,7 +20,7 @@
 
 .card {
   margin: 20px;
-  height: 6.5rem;
+  height: 7.5rem;
 }
 
 .card-chart {
@@ -34,4 +34,15 @@
 .progress-bar {
   font-size: 14px;
   line-height: 25px;
+}
+
+/* visa-progress.component.css */
+.progress-bar {
+  transition: width 0.5s ease-in-out; /* Add a transition for the width property */
+}
+
+/* Optional: Add some styling for a gradient effect */
+.progress-bar {
+  background: linear-gradient(to right, #4CAF50, #8CC84B); /* Change colors to your liking */
+  border-radius: 0.25rem; /* Optional: Add rounded corners */
 }
