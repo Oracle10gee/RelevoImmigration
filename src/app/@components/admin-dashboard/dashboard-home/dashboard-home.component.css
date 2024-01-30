@@ -18,15 +18,6 @@
 
 /* home-overview.component.css */
 
-.card {
-  margin: 20px;
-  height: 7.5rem;
-}
-
-.card-chart {
-  height: 30rem !important;
-}
-
 .progress {
   height: 25px;
 }
