@@ -9,8 +9,8 @@
   height: 100vh;
   min-width: 350px;
   padding: 20px;
-  background: url("../../../../assets/visa-passport.jpg"),
-    linear-gradient(#d9d9d9, #0050bc);
+  background: 
+    linear-gradient(#c7c7c7, #02387e);
   background-size: contain;
   background-blend-mode: multiply;
 }

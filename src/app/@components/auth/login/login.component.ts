@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -18,12 +19,12 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.email == '') {
-      alert('please enter email');
+      this.showAlert('Error','please enter email', 'Error');
       return;
     }
 
     if (this.password == '') {
-      alert('please enter password');
+      this.showAlert('Error','please enter password','Error');
       return;
     }
 
@@ -36,5 +37,13 @@ export class LoginComponent implements OnInit {
 
   signInWithGoogle() {
     this.auth.googleSignIn();
+  }
+
+  showAlert(title: string, text: string, icon: any) {
+    Swal.fire({
+      title: title,
+      text: text,
+      icon: icon,
+    });
   }
 }

@@ -30,6 +30,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BarChartComponent } from './utils/charts/bar-chart/bar-chart.component';
 import { PieChartComponent } from './utils/charts/pie-chart/pie-chart.component';
 import { NgChartsModule, NgChartsConfiguration  } from 'ng2-charts';
+import { ApplicationComponent } from './@components/admin-dashboard/dashboard-home/application/application.component';
+import { ApplicationFormComponent } from './@components/admin-dashboard/dashboard-home/application/application-form/application-form.component';
+import { UploadDocumentComponent } from './@components/admin-dashboard/dashboard-home/application/upload-document/upload-document.component';
+import { AppointmentComponent } from './@components/admin-dashboard/dashboard-home/application/appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +57,10 @@ import { NgChartsModule, NgChartsConfiguration  } from 'ng2-charts';
     VerifyEmailComponent,
     BarChartComponent,
     PieChartComponent,
+    ApplicationComponent,
+    ApplicationFormComponent,
+    UploadDocumentComponent,
+    AppointmentComponent,
   ],
   imports: [
     BrowserModule,
