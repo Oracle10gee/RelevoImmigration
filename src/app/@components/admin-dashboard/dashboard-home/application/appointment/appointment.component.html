@@ -1,0 +1,63 @@
+
+<section>
+    <div class="container mt-4">
+        <h2 class="mb-4 fw-bolder">Request an Appointment</h2>
+        <div class="card p-5 shadow">
+
+            <form #appointmentForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="row mb-3">
+                    <h2 class="fw-bolder mb-3">Choose Preferred Time for your Appointment (Appointment takes an hour)</h2>
+                    <div class="col-md-6">
+                        <label for="fromTime" class="form-label">From</label>
+                        <input type="time" class="form-control" id="fromTime" name="fromTime" required [(ngModel)]="formData.fromTime">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="toTime" class="form-label">To</label>
+                        <input type="time" class="form-control" id="toTime" name="toTime" required [(ngModel)]="formData.toTime">
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <hr class="shadow">
+                </div>
+
+
+                <!-- Previous Schengen Visas -->
+                <div class="row mb-3">
+                    <h2 class="fw-bolder mb-3 mt-3">Purpose Letter (Not more than 500 words)</h2>
+
+                    <div class="col-md-12">
+                        <label for="purposeLetter" class="form-label">Purpose Letter</label>
+                        <textarea rows="4" cols="50" type="text" class="form-control" id="purposeLetter"
+                            name="purposeLetter" required [(ngModel)]="formData.purposeLetter"></textarea>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <hr class="shadow">
+                </div>
+
+                <!-- Message -->
+                <div class="row mb-3">
+                    <h2 class="fw-bolder mb-3 mt-3">Message (Optional)</h2>
+
+                    <div class="col-md-12">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea rows="4" cols="50" type="text" class="form-control" id="message"
+                            name="message" required [(ngModel)]="formData.message"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-color" [disabled]="!appointmentForm.valid">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</section>
