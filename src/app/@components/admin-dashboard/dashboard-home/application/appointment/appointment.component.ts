@@ -22,6 +22,6 @@ export class AppointmentComponent {
       timerProgressBar: true,
       showConfirmButton: false,
     });
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard/start-application']);
   }
 }
