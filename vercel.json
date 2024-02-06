@@ -1,27 +1,17 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "src/",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "src/index.html" }
-  ],
-  "builds": [
-    {
-      "src": "src/",
-      "use": "@vercel/node",
-      "config": { "maxLambdaSize": "5mb" },
-      "env": { "EXAMPLE_ENV_VAR": "example-value" }
-    }
-  ],
-  "build": {
-    "cmd": "bash custom-build.sh",
-    "env": {
-      "CUSTOM_ENV_VAR": "custom-value"
-    }
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/",
+        "use": "@vercel/static-build",
+        "config": {
+          "buildCommand": "bash custom-build.sh"
+        }
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "src/index.html" }
+    ]
   }
-}
+  
