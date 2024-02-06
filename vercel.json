@@ -1,26 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "src/",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "src/index.html" }
-  ],
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
-  "builds": [
-    {
-      "src": "src/",
-      "use": "@vercel/node",
-      "config": { "maxLambdaSize": "5mb" },
-      "env": { "EXAMPLE_ENV_VAR": "example-value" }
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "src/index.html" }
+    ]
+  }
+  
