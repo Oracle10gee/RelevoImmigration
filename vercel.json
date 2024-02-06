@@ -1,28 +1,24 @@
 {
-  "version": 2,
-  "builds": [
-    {
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/.*",
+        "dest": "src/index.html"
+      }
+    ],
+    "build": {
+      "functions": "api/",
       "src": "src/",
-      "use": "@vercel/node"
-    }
-  ],
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/.*",
-      "dest": "src/index.html"
-    }
-  ],
-  "build": {
-    "functions": "api/",
-    "src": "src/",
-    "scripts": {
-      "build": "bash custom-build.sh"
+      "scripts": {
+        "build": "bash custom-build.sh"
+      }
     }
   }
-}
+  
