@@ -1,24 +1,23 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "src/",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      { "handle": "filesystem" },
-      {
-        "src": "/.*",
-        "dest": "src/index.html"
-      }
-    ],
-    "build": {
-      "functions": "api/",
+  "version": 2,
+  "builds": [
+    {
       "src": "src/",
-      "scripts": {
-        "build": "bash custom-build.sh"
-      }
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/.*",
+      "dest": "src/index.html"
+    }
+  ],
+  "builds": {
+    "src": "src/",
+    "functions": "api/",
+    "scripts": {
+      "build": "bash custom-build.sh"
     }
   }
-  
+}
