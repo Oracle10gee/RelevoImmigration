@@ -17,12 +17,11 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
   upcomingEvents: { name: string; date: Date }[] = [];
   currentDateTime: string = '';
 
-  progressValue = 30; // Start at 30% progress
-  daysRemaining = Math.round((100 - this.progressValue) / 100 * 365); // Calculate initial days remaining
+  progressValue = 15; // Start at 30% progress
+  daysRemaining = Math.round(((100 - this.progressValue) / 100) * 365); // Calculate initial days remaining
 
   userDisplayName: string | null = null; // variable to store the user's display name
-  
-  
+
   private subscription: Subscription | undefined;
 
   constructor(
@@ -53,8 +52,6 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
         this.progressValue = 30; // Reset progress to 30%
       }
     }, 86400000); // Update every 24 hours (86400000 milliseconds)
-  
-
 
     // Assume your service provides a method to get relocation progress
     this.relocationService.getRelocationProgress().subscribe((progress) => {
@@ -72,8 +69,6 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
     this.subscription = interval(1000).subscribe(() => {
       this.updateDateTime();
     });
-
-    
   }
 
   ngOnDestroy(): void {
@@ -101,14 +96,15 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
       modalOptions
     );
   }
-  
+
   formatDate(date: Date): string {
     return this.datePipe.transform(date, 'longDate') || '';
   }
 
   private updateDateTime(): void {
     const europeanDateTime = this.getEuropeanDateTime();
-    this.currentDateTime = this.datePipe.transform(europeanDateTime, 'full') || '';
+    this.currentDateTime =
+      this.datePipe.transform(europeanDateTime, 'full') || '';
   }
 
   private getEuropeanDateTime(): Date {
@@ -118,6 +114,4 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
     });
     return utcDateTime ? new Date(utcDateTime) : new Date();
   }
-
-
 }
