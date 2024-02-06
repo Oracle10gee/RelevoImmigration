@@ -6,20 +6,22 @@
       "use": "@vercel/static-build"
     }
   ],
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "src/index.html" }
   ],
+  "builds": [
+    {
+      "src": "src/",
+      "use": "@vercel/node",
+      "config": { "maxLambdaSize": "5mb" },
+      "env": { "EXAMPLE_ENV_VAR": "example-value" }
+    }
+  ],
   "build": {
-    "functions": "api/",
-    "src": "src/",
-    "scripts": {
-      "build": "bash custom-build.sh"
+    "cmd": "bash custom-build.sh",
+    "env": {
+      "CUSTOM_ENV_VAR": "custom-value"
     }
   }
 }
