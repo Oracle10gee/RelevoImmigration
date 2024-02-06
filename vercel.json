@@ -1,6 +1,5 @@
 {
     "build": {
-      "src": "src/",
       "scripts": {
         "build": "bash custom-build.sh"
       }
