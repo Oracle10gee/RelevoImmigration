@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { LoginComponent } from './@components/auth/login/login.component';
 import { ForgotPasswordComponent } from './@components/auth/forgot-password/forgot-password.component';
 import { DashboardComponent } from './@components/admin-dashboard/dashboard/dashboard.component';
@@ -18,9 +17,11 @@ import { ApplicationComponent } from './@components/admin-dashboard/dashboard-ho
 import { ApplicationFormComponent } from './@components/admin-dashboard/dashboard-home/application/application-form/application-form.component';
 import { UploadDocumentComponent } from './@components/admin-dashboard/dashboard-home/application/upload-document/upload-document.component';
 import { AppointmentComponent } from './@components/admin-dashboard/dashboard-home/application/appointment/appointment.component';
+import { WebsiteComponent } from './@components/website/website.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Default route
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' }, // Default route
+  { path: 'welcome', component: WebsiteComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'checkout', component: CheckoutTestComponent },
@@ -53,4 +54,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

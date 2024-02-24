@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {MatExpansionModule} from '@angular/material/expansion'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './@components/auth/login/login.component';
@@ -34,6 +36,7 @@ import { ApplicationComponent } from './@components/admin-dashboard/dashboard-ho
 import { ApplicationFormComponent } from './@components/admin-dashboard/dashboard-home/application/application-form/application-form.component';
 import { UploadDocumentComponent } from './@components/admin-dashboard/dashboard-home/application/upload-document/upload-document.component';
 import { AppointmentComponent } from './@components/admin-dashboard/dashboard-home/application/appointment/appointment.component';
+import { WebsiteComponent } from './@components/website/website.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +64,7 @@ import { AppointmentComponent } from './@components/admin-dashboard/dashboard-ho
     ApplicationFormComponent,
     UploadDocumentComponent,
     AppointmentComponent,
+    WebsiteComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +78,8 @@ import { AppointmentComponent } from './@components/admin-dashboard/dashboard-ho
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     NgChartsModule, 
+    MatExpansionModule,
+    CarouselModule.forRoot()
 
   ],
   providers: [
