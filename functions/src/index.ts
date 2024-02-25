@@ -7,8 +7,37 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-import {onRequest} from "firebase-functions/v2/https";
-import * as logger from "firebase-functions/logger";
+import * as functions from "firebase-functions";
+import * as nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "your-email@gmail.com",
+    pass: "your-email-password",
+  },
+});
+
+
+export const sendEmail = functions.https.onCall(async (data, context) => {
+  const {name, email, message, customMessage} = data;
+
+  const mailOptions = {
+    from: "Your Name <your-email@gmail.com>",
+    to: email,
+    subject: "Your Subject",
+    text: `Hello ${name},\n\n${message}\n\n${customMessage}`,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    return {success: true, message: "Email sent successfully!"};
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return {success: false, message: "Failed to send email."};
+  }
+});
+
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
