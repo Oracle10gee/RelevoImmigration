@@ -35,7 +35,7 @@ const routes: Routes = [
       { path: 'home', component: DashboardHomeComponent },
       { path: 'pay-now', component: PayNowComponent },
       { path: 'settings', component: SettingsComponent },
-      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'support', component: ContactUsComponent },
       { path: 'bank-transfer', component: BankTransferComponent },
       { path: 'otp', component: OtpComponent },
       { path: 'transaction-success', component: TransferSuccessComponent },

@@ -120,21 +120,20 @@
             </div>
           </div>
           <mat-accordion>
-            <mat-expansion-panel>
+            <mat-expansion-panel
+              *ngFor="let accordion of accordions"
+              class="mt-2"
+            >
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  What is Relevo Immigrations and what services do you offer?
+                  {{ accordion.title }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <p>
-                Relevo Immigrations specializes in facilitating visa
-                applications for various European countries. Our services
-                include providing administrative support for temporary resident
-                categories such as visitor visas, study permits, work permits,
-                and travel document applications to European countries.
+                {{ accordion.content }}
               </p>
             </mat-expansion-panel>
-            <mat-expansion-panel class="mt-2">
+            <!-- <mat-expansion-panel class="mt-2">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Who operates the visa application process for European
@@ -218,11 +217,11 @@
               </mat-expansion-panel-header>
               <p>
                 Regular appointments for visa applications can be booked online
-                through Relevo Immigrations' appointment system. Applicants can
-                also contact the Relevo Immigrations' Contact Centre for
+                through Relevo Immigrations appointment system. Applicants can
+                also contact the Relevo Immigrations Contact Centre for
                 assistance with booking appointments.
               </p>
-            </mat-expansion-panel>
+            </mat-expansion-panel> -->
           </mat-accordion>
         </div>
         <div class="col-md-2"></div>
@@ -374,7 +373,7 @@
   <!-- Footer -->
   <footer class="py-4 bg-dark text-white text-center">
     <div class="container">
-      <p>Relevo Immigrations &copy; 2024</p>
+      <p>Copyright &copy; 2024 Relevo Immigrations. All Rights Reserved.</p>
     </div>
   </footer>
 </div>
