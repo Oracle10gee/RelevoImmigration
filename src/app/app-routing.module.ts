@@ -33,7 +33,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: DashboardHomeComponent },
-      { path: 'pay-now', component: PayNowComponent },
+      { path: 'track-application', component: PayNowComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'support', component: ContactUsComponent },
       { path: 'bank-transfer', component: BankTransferComponent },

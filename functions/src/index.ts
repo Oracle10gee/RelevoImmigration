@@ -13,8 +13,8 @@ import * as nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "your-email@gmail.com",
-    pass: "your-email-password",
+    user: "olakunleayedun@gmail.com",
+    pass: "olakunle12345",
   },
 });
 
@@ -23,7 +23,7 @@ export const sendEmail = functions.https.onCall(async (data, context) => {
   const {name, email, message, customMessage} = data;
 
   const mailOptions = {
-    from: "Your Name <your-email@gmail.com>",
+    from: "Olakunle <olakunleayedun@gmail.com>",
     to: email,
     subject: "Your Subject",
     text: `Hello ${name},\n\n${message}\n\n${customMessage}`,

@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import {MatExpansionModule} from '@angular/material/expansion'; 
+import {MatRadioModule} from '@angular/material/radio'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './@components/auth/login/login.component';
@@ -23,6 +24,7 @@ import { PillsComponent } from './utils/pills/pills.component';
 import { CoreTabsComponent } from './utils/core-tabs/core-tabs.component';
 import { CheckoutTestComponent } from './@components/checkout-test/checkout-test.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireFunctionsModule } from '@angular/fire/compat/functions';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './@components/auth/register/register.component';
 import { VerifyEmailComponent } from './@components/auth/verify-email/verify-email.component';
@@ -37,6 +39,7 @@ import { ApplicationFormComponent } from './@components/admin-dashboard/dashboar
 import { UploadDocumentComponent } from './@components/admin-dashboard/dashboard-home/application/upload-document/upload-document.component';
 import { AppointmentComponent } from './@components/admin-dashboard/dashboard-home/application/appointment/appointment.component';
 import { WebsiteComponent } from './@components/website/website.component';
+import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-home/help-desk-modal/help-desk-modal.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,7 @@ import { WebsiteComponent } from './@components/website/website.component';
     UploadDocumentComponent,
     AppointmentComponent,
     WebsiteComponent,
+    HelpDeskModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,12 +78,14 @@ import { WebsiteComponent } from './@components/website/website.component';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase),  
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     NgChartsModule, 
     MatExpansionModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AngularFireFunctionsModule,
+    MatRadioModule
 
   ],
   providers: [

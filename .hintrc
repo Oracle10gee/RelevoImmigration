@@ -24,6 +24,7 @@
       }
     ],
     "button-type": "off",
-    "axe/aria": "off"
+    "axe/aria": "off",
+    "axe/structure": "off"
   }
 }
