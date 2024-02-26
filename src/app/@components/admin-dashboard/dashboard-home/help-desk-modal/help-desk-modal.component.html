@@ -1,0 +1,44 @@
+<div class="p-5">
+  <div class="d-flex justify-content-between">
+    <div></div>
+    <div style="cursor: pointer">
+      <svg
+        (click)="closeModal()"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <form action="">
+      <label for="trackingId"
+        >Tracking ID
+        <span style="color: red"
+          ><small>
+            *(This field will be enabled after tracking id is received)
+          </small></span
+        >
+      </label>
+      <input
+        type="text"
+        id="disabled-input"
+        aria-label="disabled input"
+        class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed"
+        value="Enter tracking Id"
+        disabled
+      />
+      <button class="btn btn-primary mt-3">Continue</button>
+    </form>
+  </div>
+</div>
