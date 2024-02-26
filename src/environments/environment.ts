@@ -7,5 +7,4 @@ export const environment = {
     authDomain: "immigration-app-f54bf.firebaseapp.com",
     messagingSenderId: "958404425764",
   },
-  emailApiUrl: 'https://us-central1-immigration-app-f54bf.cloudfunctions.net/sendEmail'
 };
