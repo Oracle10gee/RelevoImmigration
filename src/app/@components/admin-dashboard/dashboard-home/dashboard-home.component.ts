@@ -5,14 +5,14 @@ import { RelocationService } from 'src/app/shared/relocation-service.service';
 import { DatePipe } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { slideInAnimation } from '../../../animations/card.animations';
+// import { slideInAnimation } from '../../../animations/card.animations';
 
 @Component({
   selector: 'app-dashboard-home',
   templateUrl: './dashboard-home.component.html',
   styleUrls: ['./dashboard-home.component.css'],
   providers: [DatePipe], // Add DatePipe to the providers array
-  animations: [slideInAnimation]
+  // animations: [slideInAnimation]
 })
 export class DashboardHomeComponent implements OnInit, OnDestroy {
   relocationProgress: number = 0; // Assume relocation progress is a percentage
