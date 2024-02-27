@@ -32,7 +32,6 @@
     "ng2-charts": "^4.1.1",
     "ngx-bootstrap": "^10.3.0",
     "ngx-chartjs": "^0.0.1",
-    "ngx-owl-carousel-o": "^17.0.0",
     "nodemailer": "^6.9.10",
     "postcss": "^8.4.25",
     "rxjs": "~7.8.0",
