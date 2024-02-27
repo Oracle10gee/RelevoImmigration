@@ -11,12 +11,7 @@
         "select-name": "off"
       }
     ],
-    "axe/name-role-value": [
-      "default",
-      {
-        "button-name": "off"
-      }
-    ],
+    "axe/name-role-value": "off",
     "axe/parsing": [
       "default",
       {
@@ -25,6 +20,7 @@
     ],
     "button-type": "off",
     "axe/aria": "off",
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "typescript-config/consistent-casing": "off"
   }
 }

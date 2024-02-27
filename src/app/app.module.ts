@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import {MatExpansionModule} from '@angular/material/expansion'; 
-import {MatRadioModule} from '@angular/material/radio'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatRadioModule } from '@angular/material/radio'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './@components/auth/login/login.component';
@@ -29,17 +30,17 @@ import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './@components/auth/register/register.component';
 import { VerifyEmailComponent } from './@components/auth/verify-email/verify-email.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BarChartComponent } from './utils/charts/bar-chart/bar-chart.component';
 import { PieChartComponent } from './utils/charts/pie-chart/pie-chart.component';
-import { NgChartsModule, NgChartsConfiguration  } from 'ng2-charts';
+import { NgChartsModule, NgChartsConfiguration } from 'ng2-charts';
 import { ApplicationComponent } from './@components/admin-dashboard/dashboard-home/application/application.component';
 import { ApplicationFormComponent } from './@components/admin-dashboard/dashboard-home/application/application-form/application-form.component';
 import { UploadDocumentComponent } from './@components/admin-dashboard/dashboard-home/application/upload-document/upload-document.component';
 import { AppointmentComponent } from './@components/admin-dashboard/dashboard-home/application/appointment/appointment.component';
 import { WebsiteComponent } from './@components/website/website.component';
 import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-home/help-desk-modal/help-desk-modal.component';
+import { SlidingCardComponent } from './utils/sliding-card/sliding-card.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-
     AppointmentComponent,
     WebsiteComponent,
     HelpDeskModalComponent,
+    SlidingCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,10 +80,10 @@ import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    AngularFireModule.initializeApp(environment.firebase),  
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    NgChartsModule, 
+    NgChartsModule,
     MatExpansionModule,
     CarouselModule.forRoot(),
     AngularFireFunctionsModule,
@@ -94,8 +96,8 @@ import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-
       useClass: LoadingInterceptor,
       multi: true,
     },
-    { provide: NgChartsConfiguration, useValue: { generateColors: false }}
+    { provide: NgChartsConfiguration, useValue: { generateColors: false } }
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

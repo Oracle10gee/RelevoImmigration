@@ -8,12 +8,11 @@
   background-color: rgba(255, 255, 255, 0.1);
   transition: 0.3s ease-in;
   cursor: pointer;
-
 }
 .card-ft-bg:hover {
-    background: linear-gradient(0.25turn, #db2521, #25196b);
-    color: #fff;
-    transform: scale(1.05);
+  background: linear-gradient(0.25turn, #db2521, #25196b);
+  color: #fff;
+  transform: scale(1.05);
 }
 
 /* home-overview.component.css */
@@ -34,6 +33,29 @@
 
 /* Optional: Add some styling for a gradient effect */
 .progress-bar {
-  background: linear-gradient(to right, #4CAF50, #8CC84B); /* Change colors to your liking */
+  background: linear-gradient(
+    to right,
+    #4caf50,
+    #8cc84b
+  ); /* Change colors to your liking */
   border-radius: 0.25rem; /* Optional: Add rounded corners */
+}
+
+.dashboard-home-header {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.dashboard-home-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25%; /* Adjust this value to control the length of the border */
+  height: 4px;
+  border-radius: 50px;
+  background-color: #25196b;
 }

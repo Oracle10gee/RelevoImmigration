@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-export const sendEmail = functions.https.onCall(async (data, context) => {
+export const sendEmail = functions.https.onCall(async (data) => {
   const {name, email, message, customMessage} = data;
 
   const mailOptions = {
