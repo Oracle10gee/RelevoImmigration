@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { RelocationService } from 'src/app/shared/relocation-service.service';
@@ -6,6 +6,9 @@ import { DatePipe } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { slideInAnimation } from '../../../animations/card.animations';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-dashboard-home',
@@ -15,6 +18,18 @@ import { slideInAnimation } from '../../../animations/card.animations';
   animations: [slideInAnimation]
 })
 export class DashboardHomeComponent implements OnInit, OnDestroy {
+  itemsPerSlide = 3;
+  @Input() cards = [
+    { title: 'Germany', description: 'Discover the perfect blend of modernity and history in Germany, where vibrant cities coexist with fairytale landscapes and captivating culture.', imageFlag: "", image: 'assets/germany.jpg' },
+    { title: 'Spain', description: 'Embark on a journey to Spain, where golden beaches, passionate flamenco rhythms, and architectural wonders await at every turn.', imageFlag: "", image: 'assets/spain.jpg' },
+    { title: 'Switzerland', description: 'Experience the breathtaking beauty of Switzerland, with its majestic Alps, pristine lakes, and charming villages nestled in the heart of Europe.', imageFlag: "", image: 'assets/switzerland.jpg' },
+    { title: 'France', description: 'Indulge in the romance and elegance of France, where iconic landmarks, exquisite cuisine, and artistic treasures create an unforgettable tapestry of experiences.', imageFlag: "", image: 'assets/france.jpg' },
+    { title: 'Sweden', description: 'Immerse yourself in the serene beauty of Sweden, where picturesque landscapes, innovative design, and a rich cultural heritage beckon to be explored.', imageFlag: "", image: 'assets/sweden.jpg' },
+    { title: 'Italy', description: 'Savor the dolce vita in Italy, where ancient ruins, Renaissance art, and mouthwatering cuisine converge in a timeless celebration of la bella vita.', imageFlag: "", image: 'assets/italy.jpg' },
+    { title: 'Belgium', description: 'Delight in the charm of Belgium, where medieval towns, world-renowned chocolates, and flavorful beers await to captivate your senses.', imageFlag: "", image: 'assets/belgium.jpg' },
+    { title: 'Netherlands', description: 'Embark on a journey through the Netherlands, where vibrant tulip fields, picturesque windmills, and iconic canal-lined cities paint a picture-perfect landscape.', imageFlag: "", image: 'assets/dutch.jpg' },
+  ];
+
   relocationProgress: number = 0; // Assume relocation progress is a percentage
   upcomingEvents: { name: string; date: Date }[] = [];
   currentDateTime: string = '';
@@ -30,8 +45,9 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
     private modalService: NgbModal,
     private relocationService: RelocationService,
     private datePipe: DatePipe,
-    private fireauth: AngularFireAuth
-  ) {}
+    private fireauth: AngularFireAuth,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.fireauth.authState.subscribe((user) => {
@@ -84,6 +100,10 @@ export class DashboardHomeComponent implements OnInit, OnDestroy {
 
   toggleBalance(): void {
     this.isBalanceHidden = !this.isBalanceHidden;
+  }
+
+  openRoute() {
+    this.router.navigate(['/dashboard/start-application'])
   }
 
   openModal() {

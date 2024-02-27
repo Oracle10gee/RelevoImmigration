@@ -6,12 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sliding-card.component.css']
 })
 export class SlidingCardComponent {
-  @Input()
-  image!: string;
-  @Input()
-  altText!: string;
-  @Input()
-  title!: string;
-  @Input()
-  content!: string;
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input() image: string = '';
 }

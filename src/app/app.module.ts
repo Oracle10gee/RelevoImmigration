@@ -41,6 +41,7 @@ import { AppointmentComponent } from './@components/admin-dashboard/dashboard-ho
 import { WebsiteComponent } from './@components/website/website.component';
 import { HelpDeskModalComponent } from './@components/admin-dashboard/dashboard-home/help-desk-modal/help-desk-modal.component';
 import { SlidingCardComponent } from './utils/sliding-card/sliding-card.component';
+// import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,7 @@ import { SlidingCardComponent } from './utils/sliding-card/sliding-card.componen
       useClass: LoadingInterceptor,
       multi: true,
     },
-    { provide: NgChartsConfiguration, useValue: { generateColors: false } }
+    { provide: NgChartsConfiguration, useValue: { generateColors: false } },
   ],
   bootstrap: [AppComponent],
 })

@@ -1,3 +1,9 @@
+.overview {
+  background-image: url("../../../../assets/line-vector.png");
+  background-size: cover;
+  /* opacity: 0.2; */
+}
+
 .card-amount-bg {
   background: linear-gradient(0.25turn, #db2521, #25196b);
   color: #fff;
@@ -57,5 +63,19 @@
   width: 25%; /* Adjust this value to control the length of the border */
   height: 4px;
   border-radius: 50px;
-  background-color: #25196b;
+  background-color: orange;
+}
+
+.hero-text {
+  margin-top: 11rem;
+}
+
+.start-card {
+  transition: 0.5s ease;
+}
+
+.start-card:hover {
+  /* background-color: #0050bc !important; */
+  /* color: #fff !important; */
+  transform: scale(1.07);
 }
