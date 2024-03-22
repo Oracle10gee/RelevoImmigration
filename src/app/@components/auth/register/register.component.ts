@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
+import { slideInAnimation } from '../../../animations/card.animations';
+
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  animations: [slideInAnimation]
 })
 export class RegisterComponent {
   email: string = '';
   password: string = '';
   passwordVisible: boolean = false;
 
-  constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   register() {
     if (this.email == '') {

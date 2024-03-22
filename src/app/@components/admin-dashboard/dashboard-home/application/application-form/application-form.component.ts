@@ -12,6 +12,8 @@ export class ApplicationFormComponent {
 
   formData: any = {};
   onSubmit(): void {
+    console.log("form submitted successfully")
+    console.log(this.formData);
     // Process form data here
     // Display SweetAlert notification
     Swal.fire({

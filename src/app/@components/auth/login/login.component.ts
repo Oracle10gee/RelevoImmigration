@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/shared/auth.service';
 import Swal from 'sweetalert2';
+import { slideInAnimation } from '../../../animations/card.animations';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+  animations: [slideInAnimation]
 })
 export class LoginComponent implements OnInit {
   email: string = '';

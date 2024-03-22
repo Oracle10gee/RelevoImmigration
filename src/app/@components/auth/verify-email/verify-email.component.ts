@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { slideInAnimation } from '../../../animations/card.animations';
+
 
 @Component({
   selector: 'app-verify-email',
   templateUrl: './verify-email.component.html',
-  styleUrls: ['./verify-email.component.css']
+  styleUrls: ['./verify-email.component.css'],
+  animations: [slideInAnimation]
 })
 export class VerifyEmailComponent implements OnInit {
   remainingTime = 7000; // 7000 milliseconds (7 seconds)

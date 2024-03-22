@@ -20,14 +20,17 @@ import { Router } from '@angular/router';
 export class DashboardHomeComponent implements OnInit, OnDestroy {
   itemsPerSlide = 3;
   @Input() cards = [
-    { title: 'Germany', description: 'Discover the perfect blend of modernity and history in Germany, where vibrant cities coexist with fairytale landscapes and captivating culture.', imageFlag: "", image: 'assets/germany.jpg' },
-    { title: 'Spain', description: 'Embark on a journey to Spain, where golden beaches, passionate flamenco rhythms, and architectural wonders await at every turn.', imageFlag: "", image: 'assets/spain.jpg' },
-    { title: 'Switzerland', description: 'Experience the breathtaking beauty of Switzerland, with its majestic Alps, pristine lakes, and charming villages nestled in the heart of Europe.', imageFlag: "", image: 'assets/switzerland.jpg' },
-    { title: 'France', description: 'Indulge in the romance and elegance of France, where iconic landmarks, exquisite cuisine, and artistic treasures create an unforgettable tapestry of experiences.', imageFlag: "", image: 'assets/france.jpg' },
-    { title: 'Sweden', description: 'Immerse yourself in the serene beauty of Sweden, where picturesque landscapes, innovative design, and a rich cultural heritage beckon to be explored.', imageFlag: "", image: 'assets/sweden.jpg' },
-    { title: 'Italy', description: 'Savor the dolce vita in Italy, where ancient ruins, Renaissance art, and mouthwatering cuisine converge in a timeless celebration of la bella vita.', imageFlag: "", image: 'assets/italy.jpg' },
-    { title: 'Belgium', description: 'Delight in the charm of Belgium, where medieval towns, world-renowned chocolates, and flavorful beers await to captivate your senses.', imageFlag: "", image: 'assets/belgium.jpg' },
-    { title: 'Netherlands', description: 'Embark on a journey through the Netherlands, where vibrant tulip fields, picturesque windmills, and iconic canal-lined cities paint a picture-perfect landscape.', imageFlag: "", image: 'assets/dutch.jpg' },
+    { title: 'Germany', description: 'Entdecken Sie die perfekte Mischung aus Moderne und Geschichte in Deutschland, wo lebhafte Städte neben märchenhaften Landschaften und faszinierender Kultur existieren.', imageFlag: "", image: 'assets/germany.jpg' },
+    { title: 'Spain', description: 'Emprende un viaje a España, donde playas doradas, ritmos apasionados de flamenco y maravillas arquitectónicas te esperan en cada esquina.', imageFlag: "", image: 'assets/spain.jpg' },
+    { title: 'Switzerland', description: 'Erleben Sie die atemberaubende Schönheit der Schweiz mit ihren majestätischen Alpen, unberührten Seen und charmanten Dörfern, die im Herzen Europas eingebettet sind.', imageFlag: "", image: 'assets/switzerland.jpg' },
+    { title: 'France', description: `Laissez-vous séduire par le romantisme et l'élégance de la France, où des monuments emblématiques, une cuisine exquise et des trésors artistiques créent une toile inoubliable d'expériences.`, imageFlag: "", image: 'assets/france.jpg' },
+    { title: 'Sweden', description: `Fördjupa dig i den fridfulla skönheten i Sverige, där pittoreska landskap, innovativ design och ett rikt kulturarv lockar till att utforskas.`, imageFlag: "", image: 'assets/sweden.jpg' },
+    { title: 'Italy', description: `Assapora la dolce vita in Italia, dove antiche rovine, arte rinascimentale e una cucina deliziosa convergono in una celebrazione senza tempo della bella vita.`, imageFlag: "", image: 'assets/italy.jpg' },
+    {
+      title: 'Belgium', description: `
+    Enjoy de charme van België, waar middeleeuwse steden, wereldberoemde chocolade en smaakvolle bieren wachten om uw zintuigen te betoveren.`, imageFlag: "", image: 'assets/belgium.jpg'
+    },
+    { title: 'Netherlands', description: `Begin een reis door Nederland, waar levendige tulpenvelden, pittoreske windmolens en iconische steden langs grachten een perfect landschap schilderen.`, imageFlag: "", image: 'assets/dutch.jpg' },
   ];
 
   relocationProgress: number = 0; // Assume relocation progress is a percentage
