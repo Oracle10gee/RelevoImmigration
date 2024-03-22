@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-application-form',
@@ -8,14 +9,30 @@ import Swal from 'sweetalert2';
   styleUrls: ['./application-form.component.css']
 })
 export class ApplicationFormComponent {
-  constructor(private router: Router) {};
+  constructor(private router: Router) { };
 
   formData: any = {};
   onSubmit(): void {
+
+    emailjs.send('service_xp7eqsc', 'template_m6wup6b', {
+      
+      fullName: this.formData.fullName,
+      email: this.formData.email,
+      gender: this.formData.gender,
+      phone: this.formData.phone,
+      nationality: this.formData.nationality,
+      dob: this.formData.dob,
+      address: this.formData.address,
+    }, '2oNAao9sy3wnuAeCv')
+      .then((response: EmailJSResponseStatus) => {
+        console.log('Email sent successfully:', response);
+      }, (error) => {
+        console.error('Error sending email:', error);
+      });
+
     console.log("form submitted successfully")
     console.log(this.formData);
-    // Process form data here
-    // Display SweetAlert notification
+  
     Swal.fire({
       icon: 'success',
       title: 'Application Successful',
