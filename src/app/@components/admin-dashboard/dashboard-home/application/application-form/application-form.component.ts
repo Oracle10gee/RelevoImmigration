@@ -14,7 +14,7 @@ export class ApplicationFormComponent {
   formData: any = {};
   onSubmit(): void {
 
-    emailjs.send('service_xp7eqsc', 'template_m6wup6b', {
+    emailjs.send('service_6iep5ur', 'template_m6wup6b', {
       
       fullName: this.formData.fullName,
       email: this.formData.email,
@@ -23,6 +23,8 @@ export class ApplicationFormComponent {
       nationality: this.formData.nationality,
       dob: this.formData.dob,
       address: this.formData.address,
+
+    
     }, '2oNAao9sy3wnuAeCv')
       .then((response: EmailJSResponseStatus) => {
         console.log('Email sent successfully:', response);
